@@ -1,0 +1,27 @@
+<!-- fortune_form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='GET' action='/fortune_results'>
+    <p>
+        <label for='name'>What's your name?</label><br>
+        <input class='form-input' id='name' type='text' name='name' placeholder='your name'/>
+    </p>
+    <p>
+        <label for='siblings'>How many siblings do you have? </label><br>
+        <input class='form-input' id='siblings' type='text' name='siblings' placeholder='number of siblings'/>
+    </p>
+    <p>
+        <label for='thing'>Pick your favorite!</label><br>
+        <select name='thing' id='thing' size='3'>
+          <option value='thingy'>thingy</option>
+          <option value='test'>test</option>
+          <option value='idk'>idk</option>
+        </select>
+    </p>
+
+    <p>
+        <button id='submit' type='submit'>Save Playlist</button>
+    </p>
+</form>
+{% endblock %}
