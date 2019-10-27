@@ -2,8 +2,34 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>results :)</h1>
-<p>{{ fortune['name'] }}</p>
-<p>{{ fortune['siblings'] }}</p>
-<p>{{ fortune['thing'] }}</p>
+<p class='fortune' style="color: {{ fortune['color'] }}">Welcome, {{ fortune['name'] }}! I've been expecting you...</p>
+<p class='fortune' style="color: {{ fortune['color'] }}">You will be abducted by aliens from {{ fortune['planet'] }}!</p>
+<p class='fortune' style="color: {{ fortune['color'] }}">But don't worry, you'll have a {{ fortune['prediction'] }} time there!</p>
+<p class='fortune' >
+    {% if fortune['planet'] == 'mercury' %}
+        <img src="{{ url_for('static', filename='mercury.jpg') }}">
+    {% endif %}
+    {% if fortune['planet'] == 'venus' %}
+        <img src="{{ url_for('static', filename='venus.jpg') }}">
+    {% endif %}
+    {% if fortune['planet'] == 'mars' %}
+        <img src="{{ url_for('static', filename='mars.jpg') }}">
+    {% endif %}
+    {% if fortune['planet'] == 'jupiter' %}
+        <img src="{{ url_for('static', filename='jupiter.jpg') }}">
+    {% endif %}
+    {% if fortune['planet'] == 'saturn' %}
+        <img src="{{ url_for('static', filename='saturn.jpg') }}">
+    {% endif %}
+    {% if fortune['planet'] == 'uranus' %}
+        <img src="{{ url_for('static', filename='uranus.jpg') }}">
+    {% endif %}
+    {% if fortune['planet'] == 'neptune' %}
+        <img src="{{ url_for('static', filename='neptune.jpg') }}">
+    {% endif %}
+    {% if fortune['planet'] == 'pluto' %}
+        <img src="{{ url_for('static', filename='pluto.jpg') }}">
+    {% endif %}
+</p>
+<p class='fortune' style="color: #{{ fortune['rand_color'] }}">Lucky Number: {{ fortune['lucky_number'] }}</p>
 {% endblock %}

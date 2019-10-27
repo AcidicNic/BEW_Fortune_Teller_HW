@@ -5,23 +5,42 @@
 <form method='GET' action='/fortune_results'>
     <p>
         <label for='name'>What's your name?</label><br>
-        <input class='form-input' id='name' type='text' name='name' placeholder='your name'/>
+        <input type='text' class='form-input' id='name' name='name' placeholder='your name'/>
     </p>
     <p>
-        <label for='siblings'>How many siblings do you have? </label><br>
-        <input class='form-input' id='siblings' type='text' name='siblings' placeholder='number of siblings'/>
+        <label for='color'>What's your favorite Color?</label>
+        <input type='color' class="form-input" id='color' name='color' value="#ffdef0">
     </p>
     <p>
-        <label for='thing'>Pick your favorite!</label><br>
-        <select name='thing' id='thing' size='3'>
-          <option value='thingy'>thingy</option>
-          <option value='test'>test</option>
-          <option value='idk'>idk</option>
-        </select>
+      <label for='hyd'>How are you doing today?</label><br>
+        <span>horrible</span>
+        <input type="range" class="form-input" id='hyd' name='hyd' min='0' max='6'>
+        <span>great!</span>
+    </p>
+    <p>
+        <label for='planet'>What's the best planet?</label>
+        <div id='planet'>
+            <label for='mercury'>Mercury</label>
+            <input type='radio' class='form-input' id='mercury' name='planet' value='mercury'><br>
+            <label for='venus'>Venus</label>
+            <input type='radio' class='form-input' id='venus' name='planet' value='venus'><br>
+            <label for='mars'>Mars</label>
+            <input type='radio' class='form-input' id='mars' name='planet' value='mars'><br>
+            <label for='jupiter'>Jupiter</label>
+            <input type='radio' class='form-input' id='jupiter' name='planet' value='jupiter'><br>
+            <label for='saturn'>Saturn</label>
+            <input type='radio' class='form-input' id='saturn' name='planet' value='saturn'><br>
+            <label for='uranus'>Uranus</label>
+            <input type='radio' class='form-input' id='uranus' name='planet' value='uranus'><br>
+            <label for='neptune'>Neptune</label>
+            <input type='radio' class='form-input' id='neptune' name='planet' value='neptune'><br>
+            <label for='pluto'>Pluto</label>
+            <input type='radio' class='form-input' id='pluto' name='planet' value='pluto'>
+        </div>
     </p>
 
     <p>
-        <button id='submit' type='submit'>Save Playlist</button>
+        <button id='submit' type='submit'>Get Fortune</button>
     </p>
 </form>
 {% endblock %}
