@@ -21,6 +21,7 @@ Describe the data contained in the API response. What can we discern about the w
 How would we obtain the temperature in the specified city? Describe using Python dictionary syntax. (HINT: Assume that the JSON response is stored in a variable called json_response.)
 * 
 * To get the temperature in the specified city, we would set a var equal to the city name and pair it with the key 'q' when we send the request. Also maybe pair 'units' with 'imperial' so the temp isn't in kelvin. then do this:
-''' python
+
+```python
 degrees = json_response["main"]["temp"]
-'''
+```
